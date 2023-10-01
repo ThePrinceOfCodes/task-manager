@@ -6,6 +6,7 @@ require('dotenv').config()
 
 //middlewares
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
 app.get('/hello', (req, res) => {
     res.send('Task Manager App')
